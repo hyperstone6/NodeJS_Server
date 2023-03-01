@@ -1,0 +1,11 @@
+extends ./layouts/main-layout.pug 
+
+block title 
+    title #{docTitle}
+
+block content
+    if prods.length > 0
+        each product in prods 
+            p #{product.title}
+    else 
+        h1 No items
